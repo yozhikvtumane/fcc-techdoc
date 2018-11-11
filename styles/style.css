@@ -23,7 +23,7 @@ html, body {
 
 a {
 	text-decoration: none;
-	color: #15afff;
+	color: #2AB7CA;
 }
 
 h1 {
@@ -73,15 +73,15 @@ nav ul li {
 	width: 75%;
 	margin: 8px auto;
 	list-style-type: none;
-	background: #7c4dff;
+	/*background: #2AB7CA;*/
 	border-radius: 3px;
-	border: 1px solid #7c4dff;
+	border: 1px solid #2AB7CA;
 }
 
 nav a {
 	display: inline-block;
 	width: 100%;
-	color: #fff;
+	color: #2AB7CA;
 	padding: 0.7em;
 }
 
@@ -163,7 +163,7 @@ code {
 	nav a {
 		display: inline-block;
 		width: 100%;
-		color: #15afff;
+		color: #2AB7CA;
 		padding: 0.1em 0.1em;
 	}
 
@@ -178,9 +178,11 @@ code {
 	}
 
 	nav ul li:hover a {
-		background: #7c4dff;
+		/*background: #2AB7CA;
 		color: #fff;
-		border-radius: 3px;
+		border-radius: 3px;*/
+		text-decoration: underline;
+		
 	}
 
 	main {
