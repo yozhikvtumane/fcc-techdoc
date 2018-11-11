@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Espruino Technical Documentation | Javascript on microcontrollers</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="js/app.js"></script>
+</head>
+
+<body class="clearfix">
+	<nav id="navbar">
+		<header>
+			<h1>Espruino</h1>
+			Javascript on microcontrollers
+			</h2>
+		</header>
+		<ul>
+			<li><a href="#Features" class="nav-link">Features</a></li>
+			<li><a href="#Pinout" class="nav-link">Pinout</a></li>
+			<li><a href="#Information" class="nav-link">Information</a></li>
+			<li><a href="#Tutorials" class="nav-link">Tutorials</a></li>
+			<li><a href="#Power" class="nav-link">Power</a></li>
+			<li><a href="#Connecting" class="nav-link">Connecting</a></li>
+			<li><a href="#Known-Problems" class="nav-link">Known Problems</a></li>
+			<li><a href="#Other-Official-Espruino-Boards" class="nav-link">Other Official Espruino Boards</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Features">
+			<header><h2>Features</h2>
+			</header>
+			<article>
+					<ul>
+						<li>Less than half the size of a business card ( 54mm x 41mm )</li>
+						<li>STM32F103RCT6 32-bit 72MHz ARM Cortex M3 CPU</li>
+						<li>256KB of Flash memory, 48KB of RAM</li>
+						<li>Micro USB connector</li>
+						<li>Input Voltage Range of 3.6v to 15v</li>
+						<li>Battery connector (JST PHR-2 2 Pin)</li>
+						<li>Built-in SD card connector</li>
+						<li>Red, Green and Blue LEDs</li>
+						<li>Pads to allow HC-05 Bluetooth modules to be added</li>
+						<li>0.1" Pin spacing</li>
+						<li>44 GPIO Pins, capable of: 26 PWM Pins, 16 ADC Pins, 3 USARTs, 2 SPI, 2 I2C and 2 DACs</li>
+						<li>Prototype area which can be used in many different configurations, for example: Servo Headers, Up to 14x 500mA outputs, 2x .NET Gadgeteer connectors, or NRF24L01+ wireless transceiver modules</li>
+						<li>Rev 1v4: CE and RoHS certification</li>
+					</ul>
+			</article>
+		</section>
+		<section class="main-section" id="Pinout">
+			<header><h2>Pinout</h2>
+			</header>
+			<article>
+				<p>
+					<ul>
+						<li><span class="pinfunction device">Purple</span> boxes show pins that are used for other functionality on the board. You should avoid using these unless you know that the marked device is not used.</li>
+						<li><span class="pinfunction note">!</span> boxes contain extra information about the pin. Hover your mouse over them to see it.</li>
+						<li><span class="pinfunction not5v">3.3v</span> boxes mark pins that are not 5v tolerant (they only take inputs from 0 - 3.3v, not 0 - 5v).</li>
+						<li><span class="pinfunction">3.3</span> is a 3.3v output from the on-board Voltage regulator.</li>
+						<li><span class="pinfunction">GND</span> is ground (0v).</li>
+						<li><span class="pinfunction">VBAT</span> is the battery voltage output (see the Espruino Board Reference).</li>
+						<li><span class="pinfunction adc">ADC</span> is an Analog to Digital Converter (for reading analog voltages)</li>
+						<li><span class="pinfunction dac">DAC</span> is a Digital to Analog Converter (for creating analog voltages). This is not available on all boards.</li>
+						<li><span class="pinfunction pwm">PWM</span> is for Pulse Width Modulation. This creates analog voltages from a digital output by sending a series of pulses.</li>
+						<li><span class="pinfunction spi">SPI</span> is the 3 wire Serial Peripheral Interface.</li>
+						<li><span class="pinfunction usart">USART</span> is a 2 wire peripheral for Serial Data.</li>
+						<li><span class="pinfunction i2c">I2C</span> is the 2 wire Inter-Integrated Circuit bus.</li>
+						<li><span class="pinfunction can">CAN</span> is for the Controller Area Network. It is not supported by Espruino.</li>
+					</ul>
+					<img src="img/pins.png" alt="Pinout">
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Information">
+			<header><h2>Information</h2>
+			</header>
+			<article>
+				<p>
+					<ul>
+						<li><a href="https://github.com/espruino/EspruinoBoard/raw/master/Original/pdf/espruino_schematic.pdf">Circuit Diagram</a></li>
+						<li><a href="https://github.com/espruino/EspruinoBoard/raw/master/Original/pdf/espruino_pcb.pdf">Board Layout</a></li>
+						<li><a href="https://github.com/espruino/EspruinoBoard/tree/master/Pico/Component">Part library for Eagle CAD</a></li>
+						<li><a href="https://github.com/espruino/EspruinoBoard/blob/master/frizting/Espruino_Original.fzpz">Part library for Fritzing</a></li>
+						<li><a href="https://www.espruino.com/datasheets/STM32F103xC.pdf">STM32F103RCT6 Datasheet</a></li>
+						<li><a href="https://www.espruino.com/datasheets/STM32F103xC_ref.pdf">STM32F103RCT6 Reference Manual</a></li>
+					</ul>
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Tutorials">
+			<header><h2>Tutorials</h2>
+			</header>
+			<article>
+				<p>
+					Links to tutorials that you can do using <span class="bold">just</span> the Espruino board:
+					<ul>
+						<li><a href="https://www.espruino.com/Quick+Start+USB">Quick Start (USB)</a></li>
+						<li><a href="https://www.espruino.com/Quick+Start+Code">Quick Start (Writing Code)</a></li>
+						<li><a href="https://www.espruino.com/NET+Gadgeteer">.NET Gadgeteer Modules</a></li>
+						<li><a href="https://www.espruino.com/Infrared+Remote+Control">Infrared Remote Control</a></li>
+						<li><a href="https://www.espruino.com/Dial+Tones">Dial Tones</a></li>
+						<li><a href="https://www.espruino.com/Software+PWM">Understanding PWM and Implementing it Yourself</a></li>
+						<li><a href="https://www.espruino.com/Flashing+Lights">Flashing Lights</a></li>
+						<li><a href="https://www.espruino.com/Single+Button+Combination+Lock">Single Button Combination Lock</a></li>
+						<li><a href="https://www.espruino.com/Control+LED+with+Button">Using BTN1 to turn on an LED</a></li>
+					</ul>
+					Tutorials using the Espruino Board:
+					<ul>
+						<li><a href="https://www.espruino.com/Web+IDE">Espruino Web IDE</a></li>
+						<li><a href="https://www.espruino.com/AdvancedDebug">Advanced Debug</a></li>
+						<li><a href="https://www.espruino.com/Heater+Controller">Heater Controller</a></li>
+						<li><a href="https://www.espruino.com/Wireless+Temperature+Sensor">Wireless Temperature Sensor</a></li>
+						<li><a href="https://www.espruino.com/WiFi+Enabled+Thermometer">WiFi Enabled Thermometer</a></li>
+						<li><a href="https://www.espruino.com/Web+Server+Favourite+Icon">Favourite Icon on Web Server</a></li>
+						<li><a href="https://www.espruino.com/Remote+Control+Sockets">Remote Control Sockets</a></li>
+						<li><a href="https://www.espruino.com/Onboard+LCD">Soldering an LCD directly to Espruino</a></li>
+						<li><a href="https://www.espruino.com/Motion+Sensing+Lights">Motion Sensing Lights</a></li>
+						<li><a href="https://www.espruino.com/Morse+Code+Texting">Morse Code Texting</a></li>
+						<li><a href="https://www.espruino.com/MeArm">MeArm Robotic Arm</a></li>
+						<li><a href="https://www.espruino.com/Infrared+Remote+Control">Infrared Remote Control</a></li>
+						<li><a href="https://www.espruino.com/Individually+Addressable+LEDs">Individually Addressable LEDs</a></li>
+						<li><a href="https://www.espruino.com/Graphical+Web+Interface">Graphical Web Interface</a></li>
+						<li><a href="https://www.espruino.com/Dial+Tones">Dial Tones</a></li>
+						<li><a href="https://www.espruino.com/WiFi+Remote+Console">Wifi Remote Console</a></li>
+						<li><a href="https://www.espruino.com/wifi_humidity">WiFi Xively Humidity/Temperature Sensor with Display</a></li>
+						<li><a href="https://www.espruino.com/Digital+Dice">Digital Dice</a></li>
+						<li><a href="https://www.espruino.com/simple_data_logger">Simple Data Logger</a></li>
+						<li><a href="https://www.espruino.com/Small+Solar+Powered">Small Solar Powered Espruino</a></li>
+						<li><a href="https://www.espruino.com/Mounting">Mounting the Espruino Board</a></li>
+						<li><a href="https://www.espruino.com/Water+Simulation">Water Physics with Servo Motors</a></li>
+						<li><a href="https://www.espruino.com/Pocket+Walking+GPS">Pocket 'walking' GPS</a></li>
+						<li><a href="https://www.espruino.com/KeyPad+Timer">KeyPad Timer</a></li>
+						<li><a href="https://www.espruino.com/KeyPad+Combination+Lock">KeyPad Combination Lock</a></li>
+						<li><a href="https://www.espruino.com/temperature_graph_pcd8544">Temperature Graph on a PCD8544 display, with DS18B20 temperature sensor</a></li>
+						<li><a href="https://www.espruino.com/temperature_display_pcd8544">Temperature on a PCD8544 display, with DS18B20 temperature sensor</a></li>
+						<li><a href="https://www.espruino.com/Making+Music">Making Sounds and Music</a></li>
+						<li><a href="https://www.espruino.com/ws2811_led_clock">LED Clock (using WS8111)</a></li>
+						<li><a href="https://www.espruino.com/wii_remote_control_helicopter">Remote Control Helicopter with Wii Nunchuck</a></li>
+						<li><a href="https://www.espruino.com/led_vu_meter">LED Volume (VU) Meter</a></li>
+					</ul>
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Power">
+			<header><h2>Power</h2>
+			</header>
+			<article>
+				<p>
+					Espruino has 3 ways of powering it - a JST PHR-2 Battery connector, Micro USB, or pin headers.
+					Both the Micro USB and Battery connector can power the device (and pin headers), and the source of power will be automatically switched. If you power Espruino via the Pin Headers, do not plug a battery in, and do not plug in USB unless you are powering it with 5v or more.
+					If you wish to power Espruino from mains, we'd suggest using a Micro USB phone charger. This are widely available as the majority of mobile phones (with the exception of iPhones and low-end Nokias) now use them.</p>
+				<img src="img/power.png" alt="">
+				<p>In order to protect the Espruino board (and what it is connected to), a 1000mA thermal (self-resetting) fuse is on the board between the pins marked 'Bat' on the board and the power source (USB/Battery).
+					See <a href="#connecting_batteries">Connecting Batteries</a> below for information on connecting Batteries.
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Connecting">
+			<header><h2>Connecting</h2>
+			</header>
+			<p class="warning">
+					<span class="bold">NOTE:</span> The Espruino board has no case and so the USB connector is completely unsupported. This means it is relatively delicate (especially on rev 1v3 boards) and needs to be treated carefully. Try and pull the connector straight out, and do not push down on the board when the connector is inserted, or try and move the board around using the cable.
+				</p>
+			<article>
+				
+				<h3>Pin Strip</h3>
+				There's a <a href="https://www.espruino.com/Pin+Strip">Pin Strip</a> page covering how to solder Pin Strip onto the Espruino Board
+				<h3 id="connecting_batteries">Batteries</h3>
+				<p>You can usually buy batteries with the PH-type 2 pin female JST (PHR-2) connector ready-soldered, see <a href="https://www.espruino.com/Battery">Battery</a> for more details on battries and connectors.</p>
+				<h3>Servo Motors</h3>
+				<p>See the <a href="https://www.espruino.com/Pin+Strip">Pin Strip</a> page for ideas on how to connect servos, and the <a href="https://www.espruino.com/Servo+Motors">Servo Motors</a> page on how to control them.</p>
+				<h3>Motor Drivers</h3>
+				<p>To drive motors there are two good options - both of which solder on to the prototype area (which is designed for SOIC-style chips). The surface mount versions of these will require some soldering skills, so if you only need to turn motors on and off (and not drive them at different speeds) then a <a href="https://www.espruino.com/Relays">Relay Module</a> might be easier.</p>
+				<h3>L293D</h3>
+				<p>The <a href="https://www.espruino.com/L293D">L293D</a> is slightly more expensive, but has four outputs, each of which can pull up to a voltage as well as down to 0v. This makes it ideal for driving motors in forwards and reverse, as each side of the motor can be connected to an output.</p>
+				<h3>ULN2003</h3>
+				<p>The <a href="https://www.espruino.com/ULN2003">ULN2003</a> has 7 x 500mA outputs, but they can only pull down to 0v. This makes it great for powering relays, solenoids and stepper motors - but only useful for motors if you only need them to run in a single direction.</p>
+				<h3>Bluetooth</h3>
+				<p>Espruino is designed for HC-05 modules. Have a look at the <a href="https://www.espruino.com/Bluetooth">Bluetooth</a> page for more information.</p>
+				<p></p>
+			</article>
+		</section>
+		<section class="main-section" id="Known-Problems">
+			<header><h2>Known Problems</h2>
+			</header>
+			<article>
+				<p>
+					<ul>
+						<li>PWM output (via <code>analogWrite</code>) on B4 and A6 at the same time is not possible (as they share timer hardware)</li>
+						<li>You can't setWatch on two pins with the same number (eg. A5 and C5) - this is a limitation of the STM32F1</li>
+						<li>You can't use <code>setWatch</code> on B11/C11/D11 and enable <code>setDeepSleep</code>, as A11 is watched in order to wake when USB is plugged in</li>
+						<li>The USB bootloader as shipped on Espruino KickStarter boards requires the APB1 clock frequency to be changed before it will work reliably. This is automatically handled by the Web IDE's flasher, and also Espruino's version of <a href="https://github.com/espruino/Espruino/blob/master/scripts/stm32loader.py">stm32loader.py</a> if you supply the <code>-k</code> switch.</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Other-Official-Espruino-Boards">
+			<header><h2>Other Official Espruino Boards</h2>
+			</header>
+			<article class="clearfix center">
+				<div class="boards_thumb">
+					<a href="https://www.espruino.com/MDBT42Q">
+						<img src="img/boards_MDBT42Q.png" alt="MDBT42Q board">
+						<span>MDBT42Q Bluetooth Module</span>
+					</a>
+				</div>
+				<div class="boards_thumb">
+					<a href="https://www.espruino.com/Pixl.js">
+						<img src="img/boards_pixl.png" alt="Pixl.js board">
+						<span>Pixl.js</span>
+					</a>
+				</div>
+				<div class="boards_thumb">
+					<a href="https://www.espruino.com/WiFi">
+						<img src="img/boards_wifi.png" alt="Espruino WiFi board">
+						<span>Espruino WiFi</span>
+					</a>
+				</div>
+				<div class="boards_thumb">
+					<a href="https://www.espruino.com/Puck.js">
+						<img src="img/boards_puck.png" alt="Puck.js board">
+						<span>Puck.js</span>
+					</a>
+				</div>
+				<div class="boards_thumb">
+					<a href="https://www.espruino.com/Pico">
+						<img src="img/boards_pico.png" alt="Pico board">
+						<span>Espruino Pico</span>
+					</a>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>
