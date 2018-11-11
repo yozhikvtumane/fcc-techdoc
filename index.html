@@ -14,7 +14,6 @@
 		<header>
 			<h1>Espruino</h1>
 			Javascript on microcontrollers
-			</h2>
 		</header>
 		<ul>
 			<li><a href="#Features" class="nav-link">Features</a></li>
@@ -53,7 +52,6 @@
 			<header><h2>Pinout</h2>
 			</header>
 			<article>
-				<p>
 					<ul>
 						<li><span class="pinfunction device">Purple</span> boxes show pins that are used for other functionality on the board. You should avoid using these unless you know that the marked device is not used.</li>
 						<li><span class="pinfunction note">!</span> boxes contain extra information about the pin. Hover your mouse over them to see it.</li>
@@ -70,14 +68,12 @@
 						<li><span class="pinfunction can">CAN</span> is for the Controller Area Network. It is not supported by Espruino.</li>
 					</ul>
 					<img src="img/pins.png" alt="Pinout">
-				</p>
-			</article>
+		</article>
 		</section>
 		<section class="main-section" id="Information">
 			<header><h2>Information</h2>
 			</header>
 			<article>
-				<p>
 					<ul>
 						<li><a href="https://github.com/espruino/EspruinoBoard/raw/master/Original/pdf/espruino_schematic.pdf">Circuit Diagram</a></li>
 						<li><a href="https://github.com/espruino/EspruinoBoard/raw/master/Original/pdf/espruino_pcb.pdf">Board Layout</a></li>
@@ -86,14 +82,12 @@
 						<li><a href="https://www.espruino.com/datasheets/STM32F103xC.pdf">STM32F103RCT6 Datasheet</a></li>
 						<li><a href="https://www.espruino.com/datasheets/STM32F103xC_ref.pdf">STM32F103RCT6 Reference Manual</a></li>
 					</ul>
-				</p>
 			</article>
 		</section>
 		<section class="main-section" id="Tutorials">
 			<header><h2>Tutorials</h2>
 			</header>
 			<article>
-				<p>
 					Links to tutorials that you can do using <span class="bold">just</span> the Espruino board:
 					<ul>
 						<li><a href="https://www.espruino.com/Quick+Start+USB">Quick Start (USB)</a></li>
@@ -140,7 +134,6 @@
 						<li><a href="https://www.espruino.com/wii_remote_control_helicopter">Remote Control Helicopter with Wii Nunchuck</a></li>
 						<li><a href="https://www.espruino.com/led_vu_meter">LED Volume (VU) Meter</a></li>
 					</ul>
-				</p>
 			</article>
 		</section>
 		<section class="main-section" id="Power">
@@ -186,14 +179,12 @@
 			<header><h2>Known Problems</h2>
 			</header>
 			<article>
-				<p>
 					<ul>
 						<li>PWM output (via <code>analogWrite</code>) on B4 and A6 at the same time is not possible (as they share timer hardware)</li>
 						<li>You can't setWatch on two pins with the same number (eg. A5 and C5) - this is a limitation of the STM32F1</li>
 						<li>You can't use <code>setWatch</code> on B11/C11/D11 and enable <code>setDeepSleep</code>, as A11 is watched in order to wake when USB is plugged in</li>
 						<li>The USB bootloader as shipped on Espruino KickStarter boards requires the APB1 clock frequency to be changed before it will work reliably. This is automatically handled by the Web IDE's flasher, and also Espruino's version of <a href="https://github.com/espruino/Espruino/blob/master/scripts/stm32loader.py">stm32loader.py</a> if you supply the <code>-k</code> switch.</li>
 					</ul>
-				</p>
 			</article>
 		</section>
 		<section class="main-section" id="Other-Official-Espruino-Boards">
